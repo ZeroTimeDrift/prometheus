@@ -1,4 +1,12 @@
+import { hotjar } from 'react-hotjar';
+import { useEffect } from 'react';
+
 export default function Home() {
+  // Integrate Hotjar
+  useEffect(() => {
+    hotjar.initialize(3209433, 6)
+  }, []);
+
   return (
     <div>
       <iframe
